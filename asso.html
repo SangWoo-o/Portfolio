@@ -1,0 +1,343 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Associations & Engagement - Ambre Bagnariol</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+			/* 1. En-tête Bandeau Noir (Alignement vertical parfait) */
+			#header.custom-black-header {
+				background-color: #000000 !important;
+				width: 100% !important;
+				padding: 12px 0 !important;
+				margin: 0 0 30px 0 !important;
+				position: relative !important;
+			}
+
+			#header.custom-black-header .inner {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 20px;
+				display: flex !important;
+				justify-content: space-between !important;
+				align-items: center !important;
+				flex-wrap: nowrap !important;
+				white-space: nowrap !important;
+			}
+
+			#header.custom-black-header .logo {
+				display: flex !important;
+				align-items: center !important;
+				gap: 10px;
+				text-decoration: none !important;
+				border: none !important;
+				margin: 0 !important;
+				padding: 0 !important;
+				line-height: 1 !important;
+				flex-shrink: 0;
+			}
+
+			#header.custom-black-header .logo .symbol {
+				display: flex !important;
+				align-items: center !important;
+				margin: 0 !important;
+			}
+
+			#header.custom-black-header .logo .symbol img {
+				width: 28px;
+				height: 28px;
+				border-radius: 4px;
+				display: block;
+			}
+
+			#header.custom-black-header .logo .title {
+				color: #ffffff !important;
+				font-weight: 800;
+				font-size: 0.9em;
+				letter-spacing: 1.5px;
+				text-transform: uppercase;
+				white-space: nowrap;
+				line-height: 1 !important;
+				margin: 0 !important;
+			}
+
+			#header.custom-black-header nav {
+				display: flex !important;
+				align-items: center !important;
+				gap: 15px;
+				margin: 0 !important;
+				padding: 0 !important;
+				line-height: 1 !important;
+				flex-shrink: 0;
+			}
+
+			#header.custom-black-header nav a {
+				color: #ffffff !important;
+				text-decoration: none !important;
+				font-weight: 600;
+				font-size: 0.82em;
+				border: none !important;
+				white-space: nowrap !important;
+				margin: 0 !important;
+				padding: 0 !important;
+				line-height: 1 !important;
+				transition: opacity 0.2s ease;
+			}
+
+			#header.custom-black-header nav a:hover {
+				opacity: 0.7;
+			}
+
+			/* 2. Style des cartes d'associations */
+			.asso-container {
+				display: flex;
+				flex-direction: column;
+				gap: 25px;
+				max-width: 900px;
+				margin: 40px auto;
+			}
+
+			.asso-card {
+				background: #f8fafc;
+				border: 1px solid #e2e8f0;
+				border-radius: 24px;
+				padding: 30px;
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+				transition: transform 0.2s ease, box-shadow 0.2s ease;
+			}
+
+			.asso-card:hover {
+				transform: translateY(-3px);
+				box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+			}
+
+			.asso-header {
+				display: flex;
+				gap: 20px;
+				align-items: flex-start;
+				margin-bottom: 18px;
+			}
+
+			.asso-logo {
+				width: 70px;
+				height: 70px;
+				border-radius: 16px;
+				object-fit: contain;
+				background: #ffffff;
+				border: 1px solid #e2e8f0;
+				padding: 8px;
+				flex-shrink: 0;
+			}
+
+			.asso-info h3 {
+				font-size: 1.25em;
+				font-weight: 700;
+				color: #0f172a;
+				margin: 0 0 4px 0;
+				line-height: 1.3;
+			}
+
+			.asso-organization {
+				color: #475569;
+				font-size: 0.95em;
+				font-weight: 600;
+				margin-bottom: 4px;
+			}
+
+			.asso-date {
+				color: #94a3b8;
+				font-size: 0.88em;
+				font-weight: 500;
+				margin-bottom: 12px;
+			}
+
+			/* Tags sur une seule ligne à fond noir et texte blanc */
+			.asso-tags {
+				display: flex;
+				flex-wrap: nowrap;
+				gap: 8px;
+				margin-top: 10px;
+				overflow-x: auto;
+			}
+
+			.asso-tag-pill {
+				background: #000000;
+				color: #ffffff;
+				font-size: 0.8em;
+				font-weight: 600;
+				padding: 5px 14px;
+				border-radius: 20px;
+				white-space: nowrap;
+				border: none;
+			}
+
+			.asso-bullets {
+				margin: 15px 0 0 0;
+				padding-left: 20px;
+				color: #334155;
+				font-size: 0.94em;
+				line-height: 1.6;
+			}
+
+			.asso-bullets li {
+				margin-bottom: 8px;
+			}
+
+			.asso-bullets li:last-child {
+				margin-bottom: 0;
+			}
+
+			@media screen and (max-width: 980px) {
+				#header.custom-black-header .inner {
+					overflow-x: auto;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header Navigation (Bandeau Noir - Alignement Parfait) -->
+			<header id="header" class="custom-black-header">
+				<div class="inner">
+
+					<!-- Logo AB + Nom -->
+					<a href="index.html" class="logo">
+						<span class="symbol"><img src="images/AB-logo.jpg" alt="Logo AB" /></span>
+						<span class="title">AMBRE BAGNARIOL</span>
+					</a>
+
+					<!-- Menu Horizontal -->
+					<nav>
+						<a href="index.html">Home</a>
+						<a href="generic.html">About me</a>
+						<a href="Projets.html">Academic Projects</a>
+						<a href="experience.html">Experience</a>
+						<a href="education.html">Education</a>
+						<a href="qualification.html">Qualification</a>
+						<a href="asso.html">Asso</a>
+					</nav>
+
+				</div>
+			</header>
+
+			<!-- Main Content -->
+			<div id="main">
+				<div class="inner">
+					<h1>Associations & Extracurriculars</h1>
+					<span class="image main"><img src="images/pic13.jpg" alt="Illustration" style="height: 200px; object-fit: cover; width: 100%;" /></span>
+					<p>Découvrez mes engagements associatifs, projets étudiants et activités passion.</p>
+
+					<!-- Conteneur des Cartes d'Associations -->
+					<div class="asso-container">
+
+						<!-- CARTE 1 : Parachutisme / Skydiving -->
+						<div class="asso-card">
+							<div class="asso-header">
+								<img src="images/skydiving-logo.jpg" alt="Parachutisme Logo" class="asso-logo" />
+								<div class="asso-info">
+									<h3>Autonomous Skydiver — PAC License</h3>
+									<div class="asso-organization">Fédération Française de Parachutisme · France</div>
+									<div class="asso-date">Summer 2026</div>
+
+									<div class="asso-tags">
+										<span class="asso-tag-pill">PAC License</span>
+										<span class="asso-tag-pill">Skydiving</span>
+										<span class="asso-tag-pill">Stress Management</span>
+										<span class="asso-tag-pill">Aeronautical Passion</span>
+									</div>
+								</div>
+							</div>
+
+							<ul class="asso-bullets">
+								<li>Obtained the PAC (Parachutisme Autonome Accompagné) certification, validating solo freefall capability and canopy control.</li>
+								<li>Developed rigorous safety checks, sharp altitude awareness, and high-level decision-making under intense conditions.</li>
+								<li>Demonstrated strong self-control and analytical focus directly linked to flight safety principles.</li>
+							</ul>
+						</div>
+
+						<!-- CARTE 2 : Student Life / ELISA Aerospace -->
+						<div class="asso-card">
+							<div class="asso-header">
+								<img src="images/elisa-logo.jpg" alt="ELISA Aerospace Association" class="asso-logo" />
+								<div class="asso-info">
+									<h3>Student Life & Project Contributor</h3>
+									<div class="asso-organization">ELISA Aerospace Student Associations · Bordeaux, France</div>
+									<div class="asso-date">2024 → Present</div>
+
+									<div class="asso-tags">
+										<span class="asso-tag-pill">Student Life</span>
+										<span class="asso-tag-pill">Teamwork</span>
+										<span class="asso-tag-pill">Event Coordination</span>
+										<span class="asso-tag-pill">Community</span>
+									</div>
+								</div>
+							</div>
+
+							<ul class="asso-bullets">
+								<li>Active participation in campus events, technical workshops, and student integration activities.</li>
+								<li>Collaborated with peer engineering groups on hands-on robotics and aeronautical promotions.</li>
+								<li>Fostered strong team spirit and peer support across different engineering cohorts.</li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<section>
+						<h2>Get in touch</h2>
+						<form method="post" action="#">
+							<div class="fields">
+								<div class="field half">
+									<input type="text" name="name" id="name" placeholder="Name" />
+								</div>
+								<div class="field half">
+									<input type="email" name="email" id="email" placeholder="Email" />
+								</div>
+								<div class="field">
+									<textarea name="message" id="message" placeholder="Message"></textarea>
+								</div>
+							</div>
+							<ul class="actions">
+								<li><input type="submit" value="Send" class="primary" /></li>
+							</ul>
+						</form>
+					</section>
+					<section>
+						<h2>Follow</h2>
+						<ul class="icons">
+							<li><a href="CV.pdf" target="_blank" class="icon solid style2 fa-file-pdf"><span class="label">CV</span></a></li>
+							<li><a href="https://www.linkedin.com/in/ambre-bagnariol" target="_blank" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						</ul>
+					</section>
+					<ul class="copyright">
+						<li>&copy; Tous droits réservés à Ambre Bagnariol.</li>
+					</ul>
+				</div>
+			</footer>
+
+		</div>
+
+		<!-- Scripts Phantom -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
