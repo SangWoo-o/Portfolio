@@ -14,7 +14,7 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
 		<style>
-			/* 1. Navigation Haute (Bandeau Blanc unifié - Identique au Modèle 1) */
+			/* 1. Navigation Haute (Bandeau Blanc unifié) */
 			#top-navbar {
 				background-color: #ffffff !important;
 				width: 100% !important;
@@ -176,16 +176,18 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				overflow: hidden;
 			}
 
+			/* Règle CSS slider corrigée (plein écran + position 0) */
 			.slide {
-				width: 50%;
-				height: 100%;
+				width: 100% !important;
+				height: 100% !important;
 				object-fit: cover;
 				display: none;
 				position: absolute;
 				top: 0;
-				left: 2;
+				left: 0 !important;
 				padding: 0;
 				box-sizing: border-box;
 			}
@@ -317,7 +319,7 @@
 					<a href="Projets.html" style="color: #8C8C8C !important;">Academic Projects</a>
 					<a href="experience.html">Experience</a>
 					<a href="education.html">Education</a>
-									</nav>
+				</nav>
 			</div>
 		</header>
 
@@ -385,7 +387,7 @@
 						<div class="slider-container">
 							<img src="images/robot_coté.jpg" class="slide active" alt="Electronic wiring view" />
 							<img src="images/cable.jpg" class="slide" alt="Arduino Nano board and expansion shield" />
-							<img src="images/robot_chien_reseau.png" alt="Schéma électrique robot" style="object-fit: contain !important; background-color: #ffffff !important; padding: 10px;" />
+							<img src="images/robot_chien_reseau.png" class="slide" alt="Schéma électrique robot" style="object-fit: contain !important; background-color: #ffffff !important; padding: 10px;" />
 							<img src="images/robot_dessus.jpg" class="slide" alt="Top view of electronics integration" />
 
 							<button class="slider-btn prev">❮</button>
