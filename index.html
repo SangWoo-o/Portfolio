@@ -14,11 +14,11 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
 		<style>
-
+			/* 1. Navigation Haute (Bandeau Blanc unifié) */
 			#top-navbar {
-				background-color: #000000 !important;
+				background-color: #ffffff !important;
 				width: 100% !important;
-				padding: 14px 0 !important;
+				padding: 12px 0 !important;
 				margin: 0 !important;
 				position: relative !important;
 				z-index: 99999 !important;
@@ -26,7 +26,7 @@
 			}
 
 			#top-navbar .top-navbar-inner {
-				max-width: 1200px !important;
+				max-width: 1100px !important;
 				margin: 0 auto !important;
 				padding: 0 20px !important;
 				display: flex !important;
@@ -48,18 +48,18 @@
 			}
 
 			#top-navbar .top-navbar-logo img {
-				width: 28px !important;
-				height: 28px !important;
+				width: 26px !important;
+				height: 26px !important;
 				border-radius: 4px !important;
 				display: block !important;
 				margin: 0 !important;
 			}
 
 			#top-navbar .top-navbar-logo span {
-				color: #ffffff !important;
+				color: #000000 !important;
 				font-weight: 800 !important;
-				font-size: 0.9em !important;
-				letter-spacing: 1.5px !important;
+				font-size: 0.85em !important;
+				letter-spacing: 1.2px !important;
 				text-transform: uppercase !important;
 				white-space: nowrap !important;
 				line-height: 1 !important;
@@ -76,10 +76,10 @@
 			}
 
 			#top-navbar nav a {
-				color: #ffffff !important;
+				color: #000000 !important;
 				text-decoration: none !important;
 				font-weight: 600 !important;
-				font-size: 0.82em !important;
+				font-size: 0.8em !important;
 				border: none !important;
 				white-space: nowrap !important;
 				margin: 0 !important;
@@ -96,46 +96,53 @@
 				display: none !important;
 			}
 
-			
+			/* 2. Style de la section Hero Pleine Largeur (Bandeau 100%) */
 			.hero-wrapper {
 				position: relative;
-				width: 100%;
-				padding: 0px 20px;
-				margin-bottom: 40px;
+				width: 100% !important;
+				padding: 40px 20px;
+				margin: 0 0 40px 0;
 				background: linear-gradient(180deg, #1b5b88 0%, #689cb9 50%, #d8e5ed 100%);
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				border-radius: 12px;
-				box-shadow: inset 0 0 100px rgba(0,0,0,0.1);
+				border-radius: 0;
+				box-shadow: inset 0 0 60px rgba(0,0,0,0.1);
 			}
 
 			.hero-card {
 				display: flex;
 				width: 100%;
-				max-width: 960px;
-				box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+				max-width: 680px;
+				background-color: #ededed;
+				box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 				overflow: hidden;
-				border-radius: 0;
+				border-radius: 12px;
+				align-items: center;
+				padding: 20px;
 			}
 
 			.hero-card-left {
-				width: 50%;
-				position: relative;
-				min-height: 100px;
+				width: 32%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-shrink: 0;
 			}
 
 			.hero-card-left img {
-				width: 100%;
-				height: 100%;
+				width: 130px;
+				height: 130px;
+				border-radius: 50% !important;
 				object-fit: cover;
+				object-position: center;
 				display: block;
+				box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 			}
 
 			.hero-card-right {
-				width: 50%;
-				background-color: #ededed;
-				padding: 20px 25px;
+				width: 68%;
+				padding: 10px 15px 10px 25px;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
@@ -143,69 +150,67 @@
 			}
 
 			.hero-greeting {
-				font-size: 2.2em;
+				font-size: 1.35em;
 				line-height: 1.25;
-				font-weight: 300;
-				margin-bottom: 10px;
-				color: #1a202c;
-			}
-
-			.hero-greeting strong {
 				font-weight: 700;
+				margin-bottom: 8px;
+				color: #1a202c;
+				text-align: left;
 			}
 
 			.hero-bio {
 				font-size: 0.95em;
-				line-height: 1.6;
+				line-height: 1.45;
 				color: #4a5568;
-				margin-bottom: 14px;
+				margin: 0;
+				text-align: left;
 			}
 
-			.hero-contact-list {
-				display: flex;
-				flex-direction: column;
-				gap: 16px;
-				font-size: 0.9em;
+			/* 3. Uniformisation des tuiles (Tiles) */
+			.tiles article .image img {
+				height: 320px !important;
+				width: 100% !important;
+				object-fit: cover !important;
+				object-position: center !important;
+				display: block !important;
 			}
 
-			.hero-contact-item {
-				display: flex;
-				flex-direction: column;
+			/* 4. Dispositions 2x2 centrées au milieu de la page */
+			.tiles {
+				display: grid !important;
+				grid-template-columns: repeat(2, 1fr) !important;
+				gap: 2.5em !important;
+				max-width: 850px !important;
+				margin: 0 auto !important;
 			}
 
-			.hero-contact-label {
-				font-weight: 700;
-				color: #2d3748;
-				margin-bottom: 2px;
-			}
-
-			.hero-contact-item a {
-				color: #4a5568;
-				text-decoration: underline;
-				border: none;
-				transition: color 0.2s ease;
-				word-break: break-all;
-			}
-
-			.hero-contact-item a:hover {
-				color: #000000;
+			.tiles article {
+				width: 100% !important;
+				margin: 0 !important;
 			}
 
 			@media screen and (max-width: 768px) {
 				.hero-card {
 					flex-direction: column;
+					text-align: center;
+					padding: 24px 16px;
 				}
 				.hero-card-left, .hero-card-right {
 					width: 100%;
 				}
-				.hero-card-left {
-					min-height: 280px;
+				.hero-card-left img {
+					width: 110px;
+					height: 110px;
+					margin-bottom: 12px;
 				}
-				.hero-card-right {
-					padding: 30px 25px;
+				.hero-greeting, .hero-bio {
+					text-align: center;
 				}
 				#top-navbar .top-navbar-inner {
 					overflow-x: auto;
+				}
+				.tiles {
+					grid-template-columns: 1fr !important;
 				}
 			}
 		</style>
@@ -213,73 +218,53 @@
 
 	<body class="is-preload">
 
-		
+		<!-- En-tête de navigation supérieur -->
 		<header id="top-navbar">
 			<div class="top-navbar-inner">
 				<a href="index.html" class="top-navbar-logo">
-					<img src="images/AB-logo.JPG" alt="Logo AB" />
 					<span>AMBRE BAGNARIOL</span>
 				</a>
 				<nav>
-					<a href="index.html">Home</a>
+					<a href="index.html" style="color: #8C8C8C !important;">Home</a>
 					<a href="generic.html">About me</a>
 					<a href="Projets.html">Academic Projects</a>
 					<a href="experience.html">Experience</a>
 					<a href="education.html">Education</a>
-					<a href="qualification.html">Qualification</a>
-					<a href="asso.html">Asso</a>
-				</nav>
+									</nav>
 			</div>
 		</header>
 
-	
+		<!-- Wrapper -->
 		<div id="wrapper">
 
-			
+			<!-- Main -->
 			<div id="main">
-				<div class="inner">
 
-					
-					<div class="hero-wrapper">
-						<div class="hero-card">
-							<div class="hero-card-left">
-								<img src="images/moi_pilote.PNG" alt="Ambre Bagnariol en vol" />
-							</div>
-							<div class="hero-card-right">
-								<h1 class="hero-greeting">
-									Hey there,<br>
-									I'm <strong>Ambre</strong>
-								</h1>
-								<p class="hero-bio">
-									I'm currently an undergrad studying aeronautical and mechatronic engineering at ELISA Aerospace.
-								</p>
-								<div class="hero-contact-list">
-									<div class="hero-contact-item">
-										<span class="hero-contact-label">Email:</span>
-										<a href="mailto:ambre.bagnariol@elisa-aerospace.fr">ambre.bagnariol@elisa-aerospace.fr</a>
-									</div>
-									<div class="hero-contact-item">
-										<span class="hero-contact-label">Linkedin:</span>
-										<a href="https://www.linkedin.com/in/ambre-bagnariol" target="_blank">www.linkedin.com/in/ambre-bagnariol</a>
-									</div>
-									<div class="hero-contact-item">
-										<span class="hero-contact-label">Github:</span>
-										<a href="https://github.com/ton-pseudo" target="_blank">www.github.com/ton-pseudo</a>
-									</div>
-									<div class="hero-contact-item">
-										<span class="hero-contact-label">Resume & Portfolio:</span>
-										<a href="CV.pdf" target="_blank">Click here!</a>
-									</div>
-								</div>
-							</div>
+				<!-- Section Hero Pleine Largeur -->
+				<div class="hero-wrapper">
+					<div class="hero-card">
+						<div class="hero-card-left">
+							<img src="images/photo_profil.JPG" alt="Ambre Bagnariol en vol" />
+						</div>
+						<div class="hero-card-right">
+							<h1 class="hero-greeting">
+								Hello! I'm Ambre
+							</h1>
+							<p class="hero-bio">
+								I'm currently studying engineering at ELISA Aerospace Bordeaux.
+							</p>
 						</div>
 					</div>
+				</div>
 
-				
+				<!-- Contenu central avec marges pour les tuiles -->
+				<div class="inner">
+
+					<!-- Navigation Tiles (Grille 2x2 centrée) -->
 					<section class="tiles">
 						
-						
-						<article class="style1">
+						<!-- Tile 1: About Me -->
+						<article class="">
 							<span class="image">
 								<img src="images/moi_pilote.PNG" alt="About me" />
 							</span>
@@ -291,8 +276,8 @@
 							</a>
 						</article>
 
-					
-						<article class="style2">
+						<!-- Tile 2: Academic Projects -->
+						<article class="">
 							<span class="image">
 								<img src="images/chien.PNG" alt="Academic Projects" />
 							</span>
@@ -304,8 +289,8 @@
 							</a>
 						</article>
 
-						
-						<article class="style3">
+						<!-- Tile 3: Experience -->
+						<article class="">
 							<span class="image">
 								<img src="images/pic03.JPG" alt="Experience" />
 							</span>
@@ -317,8 +302,8 @@
 							</a>
 						</article>
 
-						
-						<article class="style4">
+						<!-- Tile 4: Education -->
+						<article class="">
 							<span class="image">
 								<img src="images/pic04.JPG" alt="Education" />
 							</span>
@@ -329,76 +314,60 @@
 								</div>
 							</a>
 						</article>
-
-					
-						<article class="style5">
-							<span class="image">
-								<img src="images/pic05.JPG" alt="Qualifications" />
-							</span>
-							<a href="qualification.html">
-								<h2>Qualifications</h2>
-								<div class="content">
-									<p>Theoretical PPL exam, BIA aeronautical certificate, and PAC skydiver license.</p>
-								</div>
-							</a>
-						</article>
-
-					
-						<article class="style6">
-							<span class="image">
-								<img src="images/pic06.JPG" alt="Associations" />
-							</span>
-							<a href="asso.html">
-								<h2>Associations & Community</h2>
-								<div class="content">
-									<p>Student initiatives, aerospace engagement, and extracurricular projects.</p>
-								</div>
-							</a>
-						</article>
-
+						
 					</section>
 				</div>
 			</div>
 
-			
-			<footer id="footer">
-				<div class="inner">
-					<section>
-						<h2>Get in touch</h2>
-						<form method="post" action="#">
-							<div class="fields">
-								<div class="field half">
-									<input type="text" name="name" id="name" placeholder="Name" />
-								</div>
-								<div class="field half">
-									<input type="email" name="email" id="email" placeholder="Email" />
-								</div>
-								<div class="field">
-									<textarea name="message" id="message" placeholder="Message"></textarea>
-								</div>
+			<!-- Footer Modernisé -->
+			<footer id="footer" style="background-color: #1a2332; color: #ffffff; padding: 50px 0 30px 0; margin-top: 60px;">
+				<div class="inner" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+					
+					<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; margin-bottom: 30px;">
+						
+						<!-- Colonne 1 : Statut & Contact rapide -->
+						<div style="flex: 1; min-width: 280px;">
+							<h3 style="color: #ffffff; font-size: 1.1em; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 12px; text-transform: uppercase;">
+								Get in Touch
+							</h3>
+							<p style="color: #a0aec0; font-size: 0.9em; line-height: 1.6; margin-bottom: 20px;">
+								Currently studying Aerospace. Open to discussion,I look foward to hear from you if you have any questions.
+							</p>
+							<a href="mailto:ambrebagnariol0@gmail.com" style="display: inline-block; background-color: #3182ce; color: #ffffff; padding: 10px 22px; border-radius: 6px; font-weight: 600; text-decoration: none; font-size: 0.85em; transition: background 0.2s ease;">
+    Send an Email
+</a>
+						</div>
+
+						<!-- Colonne 2 : Liens & Documents -->
+						<div style="flex: 1; min-width: 280px; display: flex; flex-direction: column; align-items: flex-start;">
+							<h3 style="color: #ffffff; font-size: 1.1em; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 12px; text-transform: uppercase;">
+								Connect with me 
+							</h3>
+							<div style="display: flex; gap: 12px; flex-wrap: wrap;">
+								<a href="CV.pdf" target="_blank" style="display: flex; align-items: center; gap: 8px; background-color: rgba(255,255,255,0.1); color: #ffffff; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-size: 0.85em; font-weight: 600;">
+									Resume (CV)
+								</a>
+								<a href="https://www.linkedin.com/in/ambre-bagnariol" target="_blank" style="display: flex; align-items: center; gap: 8px; background-color: rgba(255,255,255,0.1); color: #ffffff; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-size: 0.85em; font-weight: 600;">
+									LinkedIn
+								</a>
+								
+								</a>
 							</div>
-							<ul class="actions">
-								<li><input type="submit" value="Send" class="primary" /></li>
-							</ul>
-						</form>
-					</section>
-					<section>
-						<h2>Follow</h2>
-						<ul class="icons">
-							<li><a href="CV.pdf" target="_blank" class="icon solid style2 fa-file-pdf"><span class="label">CV</span></a></li>
-							<li><a href="https://www.linkedin.com/in/ambre-bagnariol" target="_blank" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/ton-pseudo" target="_blank" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</section>
-					<ul class="copyright">
-						<li>&copy; Tous droits réservés à Ambre Bagnariol.</li>
-					</ul>
+						</div>
+
+					</div>
+
+					<!-- Copyright -->
+					<div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; color: #718096; font-size: 0.8em;">
+						&copy; All rights reserved to Ambre Bagnariol..
+					</div>
+
 				</div>
 			</footer>
 
 		</div>
 
-	
+		<!-- Scripts Phantom -->
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/browser.min.js"></script>
 		<script src="assets/js/breakpoints.min.js"></script>
