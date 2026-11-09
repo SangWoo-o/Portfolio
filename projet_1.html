@@ -191,12 +191,6 @@
 				box-sizing: border-box;
 			}
 
-			/* Désactivation du zoom par défaut pour toutes les vidéos */
-			video.slide {
-				object-fit: contain !important;
-				background-color: #000000 !important;
-			}
-
 			.slide.active {
 				display: block;
 			}
@@ -361,7 +355,6 @@
 						<div class="slider-container">
 							<img src="images/piece_robot.jpg" class="slide active" alt="Disassembled quadruped robot components" />
 							<img src="images/robot_dessus.jpg" class="slide" alt="Assembled quadruped robot top view" />
-							<!-- 3e photo dézoomée avec object-fit: contain -->
 							<img src="images/plaque.png" class="slide" alt="CAD model of adapter plate" style="object-fit: contain !important; background-color: #ffffff !important; padding: 12px;" />
 							<img src="images/roulement.png" class="slide" alt="CAD model for bearing washer" style="object-fit: contain !important; background-color: #ffffff !important; padding: 12px;" />
 
@@ -418,14 +411,15 @@
 						</div>
 					</div>
 
-					<!-- ================= SLIDER CARD 3 (MULTIPLE VIDEOS) ================= -->
+					<!-- ================= SLIDER CARD 3 (VIDÉOS SANS SON) ================= -->
 					<div class="card-with-slider">
 						<div class="slider-container">
-							<!-- Vidéo 1 dézoomée sans rognage -->
-							<video class="slide active" autoplay muted loop playsinline controls style="object-fit: contain !important; background-color: #000000 !important;">
+							<!-- Vidéo 1 en format Paysage (object-fit: cover) sans son -->
+							<video class="slide active" autoplay muted loop playsinline controls style="object-fit: cover !important; background-color: #000000 !important;">
 								<source src="vidéo/test_1.mp4" type="video/mp4">
 								Your browser does not support the video tag.
 							</video>
+							<!-- Vidéo 2 sans son -->
 							<video class="slide" muted loop playsinline controls style="object-fit: contain !important; background-color: #000000 !important;">
 								<source src="vidéo/Video Project 2.mp4" type="video/mp4">
 								Your browser does not support the video tag.
@@ -567,6 +561,10 @@
 							slide.classList.toggle('active', isActive);
 							
 							if (slide.tagName === 'VIDEO') {
+								// Verrouillage strict du son en muet
+								slide.muted = true;
+								slide.volume = 0;
+
 								if (isActive) {
 									slide.play().catch(() => {});
 								} else {
