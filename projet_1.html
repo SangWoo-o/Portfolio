@@ -172,14 +172,13 @@
 				position: relative;
 				width: 45%;
 				min-height: 380px;
-				background: #ffffff;
+				background: #000000;
 				display: flex;
 				align-items: center;
 				justify-content: center;
 				overflow: hidden;
 			}
 
-			/* Règle CSS slider corrigée (plein écran + position 0) */
 			.slide {
 				width: 100% !important;
 				height: 100% !important;
@@ -190,6 +189,12 @@
 				left: 0 !important;
 				padding: 0;
 				box-sizing: border-box;
+			}
+
+			/* Désactivation du zoom par défaut pour toutes les vidéos */
+			video.slide {
+				object-fit: contain !important;
+				background-color: #000000 !important;
 			}
 
 			.slide.active {
@@ -356,8 +361,9 @@
 						<div class="slider-container">
 							<img src="images/piece_robot.jpg" class="slide active" alt="Disassembled quadruped robot components" />
 							<img src="images/robot_dessus.jpg" class="slide" alt="Assembled quadruped robot top view" />
-							<img src="images/plaque.png" class="slide" alt="CAD model of adapter plate" />
-							<img src="images/roulement.png" class="slide" alt="CAD model for bearing washer" />
+							<!-- 3e photo dézoomée avec object-fit: contain -->
+							<img src="images/plaque.png" class="slide" alt="CAD model of adapter plate" style="object-fit: contain !important; background-color: #ffffff !important; padding: 12px;" />
+							<img src="images/roulement.png" class="slide" alt="CAD model for bearing washer" style="object-fit: contain !important; background-color: #ffffff !important; padding: 12px;" />
 
 							<button class="slider-btn prev">❮</button>
 							<button class="slider-btn next">❯</button>
@@ -415,11 +421,12 @@
 					<!-- ================= SLIDER CARD 3 (MULTIPLE VIDEOS) ================= -->
 					<div class="card-with-slider">
 						<div class="slider-container">
-							<video class="slide active" autoplay muted loop playsinline controls>
+							<!-- Vidéo 1 dézoomée sans rognage -->
+							<video class="slide active" autoplay muted loop playsinline controls style="object-fit: contain !important; background-color: #000000 !important;">
 								<source src="vidéo/test_1.mp4" type="video/mp4">
 								Your browser does not support the video tag.
 							</video>
-							<video class="slide" muted loop playsinline controls>
+							<video class="slide" muted loop playsinline controls style="object-fit: contain !important; background-color: #000000 !important;">
 								<source src="vidéo/Video Project 2.mp4" type="video/mp4">
 								Your browser does not support the video tag.
 							</video>
