@@ -7,18 +7,18 @@
 <html>
 
 	<head>
-		<title>About Me - Ambre Bagnariol</title>
+		<title>About Me — Ambre Bagnariol</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
 		<style>
-			/* 1. Bandeau Noir Indépendant (Anti-conflit avec Phantom) */
+			/* 1. Navigation Haute (Bandeau Blanc unifié - Copie exacte du Modèle 1) */
 			#top-navbar {
-				background-color: #000000 !important;
+				background-color: #ffffff !important;
 				width: 100% !important;
-				padding: 14px 0 !important;
+				padding: 12px 0 !important;
 				margin: 0 !important;
 				position: relative !important;
 				z-index: 99999 !important;
@@ -26,7 +26,7 @@
 			}
 
 			#top-navbar .top-navbar-inner {
-				max-width: 1200px !important;
+				max-width: 1100px !important;
 				margin: 0 auto !important;
 				padding: 0 20px !important;
 				display: flex !important;
@@ -35,7 +35,6 @@
 				flex-wrap: nowrap !important;
 			}
 
-			/* Logo & Nom à gauche sur la même ligne */
 			#top-navbar .top-navbar-logo {
 				display: flex !important;
 				align-items: center !important;
@@ -49,24 +48,23 @@
 			}
 
 			#top-navbar .top-navbar-logo img {
-				width: 28px !important;
-				height: 28px !important;
+				width: 26px !important;
+				height: 26px !important;
 				border-radius: 4px !important;
 				display: block !important;
 				margin: 0 !important;
 			}
 
 			#top-navbar .top-navbar-logo span {
-				color: #ffffff !important;
+				color: #000000 !important;
 				font-weight: 800 !important;
-				font-size: 0.9em !important;
-				letter-spacing: 1.5px !important;
+				font-size: 0.85em !important;
+				letter-spacing: 1.2px !important;
 				text-transform: uppercase !important;
 				white-space: nowrap !important;
 				line-height: 1 !important;
 			}
 
-			/* Menu Navigation à droite */
 			#top-navbar nav {
 				display: flex !important;
 				align-items: center !important;
@@ -78,10 +76,10 @@
 			}
 
 			#top-navbar nav a {
-				color: #ffffff !important;
+				color: #000000 !important;
 				text-decoration: none !important;
 				font-weight: 600 !important;
-				font-size: 0.82em !important;
+				font-size: 0.8em !important;
 				border: none !important;
 				white-space: nowrap !important;
 				margin: 0 !important;
@@ -94,12 +92,11 @@
 				opacity: 0.7 !important;
 			}
 
-			/* Désactiver le header d'origine de Phantom pour éviter tout doublon */
 			#wrapper > header#header {
 				display: none !important;
 			}
 
-			/* Style des cartes de réalisations/qualifications */
+			/* 2. Style des cartes de réalisations/qualifications */
 			.asso-container {
 				display: flex;
 				flex-direction: column;
@@ -197,7 +194,7 @@
 				margin-bottom: 0;
 			}
 
-			@media screen and (max-width: 980px) {
+			@media screen and (max-width: 768px) {
 				#top-navbar .top-navbar-inner {
 					overflow-x: auto;
 				}
@@ -207,27 +204,19 @@
 
 	<body class="is-preload">
 
-		<!-- Bandeau Noir Fixe Tout en Haut (Disparaît au défilement) -->
+		<!-- Navigation Haute (Structure strictement identique au Modèle 1) -->
 		<header id="top-navbar">
 			<div class="top-navbar-inner">
-
-				<!-- Logo AB + Nom à gauche -->
 				<a href="index.html" class="top-navbar-logo">
-					<img src="images/AB-logo.jpg" alt="Logo AB" />
 					<span>AMBRE BAGNARIOL</span>
 				</a>
-
-				<!-- Menu Horizontal à droite -->
 				<nav>
 					<a href="index.html">Home</a>
-					<a href="generic.html">About me</a>
+					<a href="generic.html" style="color: #8C8C8C !important;">About me</a>
 					<a href="Projets.html">Academic Projects</a>
 					<a href="experience.html">Experience</a>
 					<a href="education.html">Education</a>
-					<a href="qualification.html">Qualification</a>
-					<a href="asso.html">Asso</a>
-				</nav>
-
+									</nav>
 			</div>
 		</header>
 
@@ -307,44 +296,53 @@
 				</div>
 			</div>
 
-			<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<section>
-						<h2>Get in touch</h2>
-						<form method="post" action="#">
-							<div class="fields">
-								<div class="field half">
-									<input type="text" name="name" id="name" placeholder="Name" />
-								</div>
-								<div class="field half">
-									<input type="email" name="email" id="email" placeholder="Email" />
-								</div>
-								<div class="field">
-									<textarea name="message" id="message" placeholder="Message"></textarea>
-								</div>
+			<!-- Footer Modernisé -->
+			<footer id="footer" style="background-color: #1a2332; color: #ffffff; padding: 50px 0 30px 0; margin-top: 60px;">
+				<div class="inner" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+					
+					<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; margin-bottom: 30px;">
+						
+						<!-- Colonne 1 : Statut & Contact rapide -->
+						<div style="flex: 1; min-width: 280px;">
+							<h3 style="color: #ffffff; font-size: 1.1em; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 12px; text-transform: uppercase;">
+								Get in Touch
+							</h3>
+							<p style="color: #a0aec0; font-size: 0.9em; line-height: 1.6; margin-bottom: 20px;">
+								Currently studying Aerospace. Open to discussion, I look forward to hearing from you if you have any questions.
+							</p>
+							<a href="mailto:ambrebagnariol0@gmail.com" style="display: inline-block; background-color: #3182ce; color: #ffffff; padding: 10px 22px; border-radius: 6px; font-weight: 600; text-decoration: none; font-size: 0.85em; transition: background 0.2s ease;">
+								Send an Email
+							</a>
+						</div>
+
+						<!-- Colonne 2 : Liens & Documents -->
+						<div style="flex: 1; min-width: 280px; display: flex; flex-direction: column; align-items: flex-start;">
+							<h3 style="color: #ffffff; font-size: 1.1em; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 12px; text-transform: uppercase;">
+								Connect with me
+							</h3>
+							<div style="display: flex; gap: 12px; flex-wrap: wrap;">
+								<a href="CV.pdf" target="_blank" style="display: flex; align-items: center; gap: 8px; background-color: rgba(255,255,255,0.1); color: #ffffff; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-size: 0.85em; font-weight: 600;">
+									Resume (CV)
+								</a>
+								<a href="https://www.linkedin.com/in/ambre-bagnariol" target="_blank" style="display: flex; align-items: center; gap: 8px; background-color: rgba(255,255,255,0.1); color: #ffffff; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-size: 0.85em; font-weight: 600;">
+									LinkedIn
+								</a>
 							</div>
-							<ul class="actions">
-								<li><input type="submit" value="Send" class="primary" /></li>
-							</ul>
-						</form>
-					</section>
-					<section>
-						<h2>Follow</h2>
-						<ul class="icons">
-							<li><a href="CV.pdf" target="_blank" class="icon solid style2 fa-file-pdf"><span class="label">CV</span></a></li>
-							<li><a href="https://www.linkedin.com/in/ambre-bagnariol" target="_blank" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						</ul>
-					</section>
-					<ul class="copyright">
-						<li>&copy; Tous droits réservés à Ambre Bagnariol.</li>
-					</ul>
+						</div>
+
+					</div>
+
+					<!-- Copyright -->
+					<div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; color: #718096; font-size: 0.8em;">
+						&copy; All rights reserved to Ambre Bagnariol..
+					</div>
+
 				</div>
 			</footer>
 
 		</div>
 
-		<!-- Scripts -->
+		<!-- Scripts Phantom -->
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/browser.min.js"></script>
 		<script src="assets/js/breakpoints.min.js"></script>
