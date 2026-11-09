@@ -5,15 +5,98 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+
 	<head>
-		<title>Professional Experiences - Ambre Bagnariol</title>
+		<title>Education — Ambre Bagnariol</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-		<!-- Style personnalisé pour les cartes d'expérience (Style Insa/IdeasLab) -->
 		<style>
+			/* 1. Navigation Haute (Bandeau Blanc unifié - Identique au Modèle 1) */
+			#top-navbar {
+				background-color: #ffffff !important;
+				width: 100% !important;
+				padding: 12px 0 !important;
+				margin: 0 !important;
+				position: relative !important;
+				z-index: 99999 !important;
+				display: block !important;
+			}
+
+			#top-navbar .top-navbar-inner {
+				max-width: 1100px !important;
+				margin: 0 auto !important;
+				padding: 0 20px !important;
+				display: flex !important;
+				justify-content: space-between !important;
+				align-items: center !important;
+				flex-wrap: nowrap !important;
+			}
+
+			#top-navbar .top-navbar-logo {
+				display: flex !important;
+				align-items: center !important;
+				gap: 10px !important;
+				text-decoration: none !important;
+				border: none !important;
+				margin: 0 !important;
+				padding: 0 !important;
+				line-height: 1 !important;
+				flex-shrink: 0;
+			}
+
+			#top-navbar .top-navbar-logo img {
+				width: 26px !important;
+				height: 26px !important;
+				border-radius: 4px !important;
+				display: block !important;
+				margin: 0 !important;
+			}
+
+			#top-navbar .top-navbar-logo span {
+				color: #000000 !important;
+				font-weight: 800 !important;
+				font-size: 0.85em !important;
+				letter-spacing: 1.2px !important;
+				text-transform: uppercase !important;
+				white-space: nowrap !important;
+				line-height: 1 !important;
+			}
+
+			#top-navbar nav {
+				display: flex !important;
+				align-items: center !important;
+				gap: 15px !important;
+				margin: 0 !important;
+				padding: 0 !important;
+				line-height: 1 !important;
+				flex-shrink: 0;
+			}
+
+			#top-navbar nav a {
+				color: #000000 !important;
+				text-decoration: none !important;
+				font-weight: 600 !important;
+				font-size: 0.8em !important;
+				border: none !important;
+				white-space: nowrap !important;
+				margin: 0 !important;
+				padding: 0 !important;
+				line-height: 1 !important;
+				transition: opacity 0.2s ease !important;
+			}
+
+			#top-navbar nav a:hover {
+				opacity: 0.7 !important;
+			}
+
+			#wrapper > header#header {
+				display: none !important;
+			}
+
+			/* 2. Style personnalisé pour les cartes d'éducation */
 			.experiences-container {
 				display: flex;
 				flex-direction: column;
@@ -109,9 +192,13 @@
 				margin-bottom: 0;
 			}
 
-			@media screen and (max-width: 600px) {
+			@media screen and (max-width: 768px) {
+				#top-navbar .top-navbar-inner {
+					overflow-x: auto;
+				}
 				.exp-header {
 					flex-direction: column;
+					gap: 15px;
 				}
 				.exp-logo {
 					width: 60px;
@@ -120,89 +207,81 @@
 			}
 		</style>
 	</head>
+
 	<body class="is-preload">
+
+		<!-- Navigation Haute -->
+		<header id="top-navbar">
+			<div class="top-navbar-inner">
+				<a href="index.html" class="top-navbar-logo">
+					<span>AMBRE BAGNARIOL</span>
+				</a>
+				<nav>
+					<a href="index.html">Home</a>
+					<a href="generic.html">About me</a>
+					<a href="Projets.html">Academic Projects</a>
+					<a href="experience.html">Experience</a>
+					<a href="education.html" style="color: #8C8C8C !important;">Education</a>
+									</nav>
+			</div>
+		</header>
+
 		<!-- Wrapper -->
 		<div id="wrapper">
-
-			<!-- Header Navigation -->
-			<header id="header" style="position: relative !important; margin-bottom: 30px !important;">
-				<div class="inner" style="display: flex !important; justify-content: space-between !important; align-items: center !important; flex-wrap: wrap !important;">
-
-					<!-- Logo -->
-					<a href="index.html" class="logo">
-						<span class="symbol"><img src="images/AB-logo.jpg" alt="Logo AB" /></span><span class="title">Ambre Bagnariol</span>
-					</a>
-
-					<!-- Menu Horizontal Direct -->
-					<nav style="position: static !important; top: auto !important; right: auto !important; width: auto !important; height: auto !important; margin: 0 !important;">
-						<a href="index.html" style="margin-left: 15px; text-decoration: none; font-weight: 600;">Home</a>
-						<a href="generic.html" style="margin-left: 15px; text-decoration: none; font-weight: 600;">About me</a>
-						<a href="Projets.html" style="margin-left: 15px; text-decoration: none; font-weight: 600;">Academic Projects</a>
-						<a href="experience.html" style="margin-left: 15px; text-decoration: none; font-weight: 600;">Experience</a>
-						<a href="education.html" style="margin-left: 15px; text-decoration: none; font-weight: 600;">Education</a>
-						<a href="qualification.html" style="margin-left: 15px; text-decoration: none; font-weight: 600;">Qualification</a>
-						<a href="asso.html" style="margin-left: 15px; text-decoration: none; font-weight: 600;">Asso</a>
-					</nav>
-
-				</div>
-			</header>
 
 			<!-- Main Content -->
 			<div id="main">
 				<div class="inner">
 					<h1 style="text-align: center;">Education</h1>
-<p style="text-align: center;">Take a look at my education</p>
+					<p style="text-align: center;">Take a look at my education</p>
 									
-					<!-- Conteneur des 2 cartes d'expérience -->
+					<!-- Conteneur des cartes d'éducation -->
 					<div class="experiences-container">
 
-						<!-- EXPÉRIENCE 1 : ELISA Aerospace -->
+						<!-- ÉDUCATION 1 : ELISA Aerospace -->
 						<div class="experience-card">
 							<div class="exp-header">
-								<img src="images/elisa.png" alt="McDonald's Logo" class="exp-logo" />
+								<img src="images/elisa.png" alt="ELISA Aerospace Logo" class="exp-logo" />
 								<div class="exp-info">
-									<h3>INTEGRATED ENGINEERING PREPARATORY CYCLE </h3>
+									<h3>INTEGRATED ENGINEERING PREPARATORY CYCLE</h3>
 									<div class="exp-company">ELISA Aerospace - Saint-Jean-D'Illac - France</div>
-									<div class="exp-date">September 2024 --> Present </div>
+									<div class="exp-date">September 2024 &rarr; Present</div>
 
 									<div class="exp-tags">
-										<span class="exp-tag-pill">Classes</span>
-										<span class="exp-tag-pill"></span>
-										<span class="exp-tag-pill"></span>
-										<span class="exp-tag-pill"></span>
+										<span class="exp-tag-pill">Aerospace Engineering</span>
+										<span class="exp-tag-pill">Mechatronics</span>
+										<span class="exp-tag-pill">Preparatory Cycle</span>
 									</div>
 								</div>
 							</div>
 
 							<ul class="exp-bullets">
-								<li>Physics: Rigid Body Mechanics, Electromagnetism, Thermodynamics.
-</li>
-								<li>Mathematics: Linear Algebra, Calculus, Analytical Geometry, Probability. 
-</li>
-								<li>Electronics and Systems: Analog and Digital Electronics, Mechanical design</li>
+								<li>Physics: Rigid Body Mechanics, Electromagnetism, Thermodynamics.</li>
+								<li>Mathematics: Linear Algebra, Calculus, Analytical Geometry, Probability.</li>
+								<li>Electronics and Systems: Analog and Digital Electronics, Mechanical design.</li>
 							</ul>
 						</div>
 
-						<!-- EXPÉRIENCE 2 : Engineering Intern -->
+						<!-- ÉDUCATION 2 : Baccalauréat -->
 						<div class="experience-card">
 							<div class="exp-header">
-								<img src="images/four.png" alt="ELISA Aerospace Logo" class="exp-logo" />
+								<img src="images/four.png" alt="Assomption Sainte-Clotilde Logo" class="exp-logo" />
 								<div class="exp-info">
-									<h3>SCIENTIFIC BACCALAUREATE </h3>
-									<div class="exp-company">Assomption Sainte-Clotilde-Bouscat-France</div>
+									<h3>SCIENTIFIC BACCALAUREATE</h3>
+									<div class="exp-company">Assomption Sainte-Clotilde - Le Bouscat - France</div>
 									<div class="exp-date">2021 - 2024</div>
 
 									<div class="exp-tags">
-										<span class="exp-tag-pill"></span>
-										<span class="exp-tag-pill"></span>
-																			</div>
+										<span class="exp-tag-pill">Physics & Chemistry</span>
+										<span class="exp-tag-pill">Advanced Mathematics</span>
+									</div>
 								</div>
 							</div>
 
 							<ul class="exp-bullets">
 								<li>Majors: Physics & Chemistry, Mathematics</li>
-								<li>Specialization: Advanced Mathematics </li>
-								<li>Honors: Graduated with Honors </li>
+								<li>Specialization: Advanced Mathematics</li>
+								<li>Honors: Graduated with Honors</li>
 							</ul>
 						</div>
 
@@ -211,44 +290,53 @@
 				</div>
 			</div>
 
-			<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<section>
-						<h2>Get in touch</h2>
-						<form method="post" action="#">
-							<div class="fields">
-								<div class="field half">
-									<input type="text" name="name" id="name" placeholder="Name" />
-								</div>
-								<div class="field half">
-									<input type="email" name="email" id="email" placeholder="Email" />
-								</div>
-								<div class="field">
-									<textarea name="message" id="message" placeholder="Message"></textarea>
-								</div>
+			<!-- Footer Modernisé -->
+			<footer id="footer" style="background-color: #1a2332; color: #ffffff; padding: 50px 0 30px 0; margin-top: 60px;">
+				<div class="inner" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+					
+					<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; margin-bottom: 30px;">
+						
+						<!-- Colonne 1 : Statut & Contact rapide -->
+						<div style="flex: 1; min-width: 280px;">
+							<h3 style="color: #ffffff; font-size: 1.1em; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 12px; text-transform: uppercase;">
+								Get in Touch
+							</h3>
+							<p style="color: #a0aec0; font-size: 0.9em; line-height: 1.6; margin-bottom: 20px;">
+								Currently studying Aerospace. Open to discussion, I look forward to hearing from you if you have any questions.
+							</p>
+							<a href="mailto:ambrebagnariol0@gmail.com" style="display: inline-block; background-color: #3182ce; color: #ffffff; padding: 10px 22px; border-radius: 6px; font-weight: 600; text-decoration: none; font-size: 0.85em; transition: background 0.2s ease;">
+								Send an Email
+							</a>
+						</div>
+
+						<!-- Colonne 2 : Liens & Documents -->
+						<div style="flex: 1; min-width: 280px; display: flex; flex-direction: column; align-items: flex-start;">
+							<h3 style="color: #ffffff; font-size: 1.1em; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 12px; text-transform: uppercase;">
+								Connect with me
+							</h3>
+							<div style="display: flex; gap: 12px; flex-wrap: wrap;">
+								<a href="CV.pdf" target="_blank" style="display: flex; align-items: center; gap: 8px; background-color: rgba(255,255,255,0.1); color: #ffffff; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-size: 0.85em; font-weight: 600;">
+									Resume (CV)
+								</a>
+								<a href="https://www.linkedin.com/in/ambre-bagnariol" target="_blank" style="display: flex; align-items: center; gap: 8px; background-color: rgba(255,255,255,0.1); color: #ffffff; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-size: 0.85em; font-weight: 600;">
+									LinkedIn
+								</a>
 							</div>
-							<ul class="actions">
-								<li><input type="submit" value="Send" class="primary" /></li>
-							</ul>
-						</form>
-					</section>
-					<section>
-						<h2>Follow</h2>
-						<ul class="icons">
-							<li><a href="CV.pdf" target="_blank" class="icon solid style2 fa-file-pdf"><span class="label">CV</span></a></li>
-							<li><a href="https://www.linkedin.com/in/ambre-bagnariol" target="_blank" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						</ul>
-					</section>
-					<ul class="copyright">
-						<li>&copy; Tous droits réservés à Ambre Bagnariol.</li>
-					</ul>
+						</div>
+
+					</div>
+
+					<!-- Copyright -->
+					<div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; color: #718096; font-size: 0.8em;">
+						&copy; All rights reserved to Ambre Bagnariol..
+					</div>
+
 				</div>
 			</footer>
 
 		</div>
 
-		<!-- Scripts -->
+		<!-- Scripts Phantom -->
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/browser.min.js"></script>
 		<script src="assets/js/breakpoints.min.js"></script>
