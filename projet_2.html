@@ -7,14 +7,14 @@
 <html>
 
 	<head>
-		<title>Asso — Ambre Bagnariol</title>
+		<title>Quadruped Robot Project — Ambre Bagnariol</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
 		<style>
-			/* 1. Navigation Haute (Bandeau Blanc unifié - Identique aux autres pages) */
+			/* 1. Navigation Haute (Bandeau Blanc unifié - Identique au Modèle 1) */
 			#top-navbar {
 				background-color: #ffffff !important;
 				width: 100% !important;
@@ -45,6 +45,14 @@
 				padding: 0 !important;
 				line-height: 1 !important;
 				flex-shrink: 0;
+			}
+
+			#top-navbar .top-navbar-logo img {
+				width: 26px !important;
+				height: 26px !important;
+				border-radius: 4px !important;
+				display: block !important;
+				margin: 0 !important;
 			}
 
 			#top-navbar .top-navbar-logo span {
@@ -88,9 +96,208 @@
 				display: none !important;
 			}
 
+			/* 2. Light blue header card */
+			.header-card {
+				background-color: #f0f7ff;
+				border: 1px solid #e0ebf6;
+				border-radius: 20px;
+				padding: 40px 25px;
+				text-align: center;
+				margin: 20px 0 35px 0;
+			}
+
+			.top-badge {
+				display: inline-block;
+				background-color: #e0e7ff;
+				color: #4338ca;
+				font-size: 0.75em;
+				font-weight: 700;
+				letter-spacing: 0.5px;
+				padding: 6px 16px;
+				border-radius: 20px;
+				margin-bottom: 20px;
+				text-transform: uppercase;
+			}
+
+			.card-title {
+				font-size: 2.3em;
+				font-weight: 800;
+				color: #0f172a;
+				margin: 0 0 18px 0;
+				line-height: 1.2;
+			}
+
+			.highlight-blue {
+				color: #0084ff;
+			}
+
+			.card-subtitle {
+				max-width: 820px;
+				margin: 0 auto 25px auto;
+				color: #475569;
+				font-size: 1em;
+				line-height: 1.6;
+			}
+
+			.tags-container {
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				gap: 10px;
+			}
+
+			.tag {
+				background-color: #ffffff;
+				border: 1px solid #e2e8f0;
+				border-radius: 20px;
+				padding: 7px 16px;
+				font-size: 0.85em;
+				font-weight: 600;
+				color: #334155;
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+			}
+
+			/* 3. Cards with slider */
+			.card-with-slider {
+				display: flex;
+				background: #ffffff;
+				border-radius: 20px;
+				border: 1px solid #e2e8f0;
+				overflow: hidden;
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+				margin: 35px 0;
+			}
+
+			.slider-container {
+				position: relative;
+				width: 45%;
+				min-height: 380px;
+				background: #ffffff;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.slide {
+				width: 50%;
+				height: 100%;
+				object-fit: cover;
+				display: none;
+				position: absolute;
+				top: 0;
+				left: 2;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			.slide.active {
+				display: block;
+			}
+
+			.slider-btn {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				background: rgba(255, 255, 255, 0.85);
+				color: #1e293b;
+				border: none;
+				width: 36px;
+				height: 36px;
+				border-radius: 50%;
+				cursor: pointer;
+				font-size: 16px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+				transition: all 0.2s ease;
+				z-index: 10;
+			}
+
+			.slider-btn:hover {
+				background: #ffffff;
+				transform: translateY(-50%) scale(1.1);
+			}
+
+			.slider-btn.prev { left: 14px; }
+			.slider-btn.next { right: 14px; }
+
+			.slider-dots {
+				position: absolute;
+				bottom: 15px;
+				left: 50%;
+				transform: translateX(-50%);
+				display: flex;
+				gap: 8px;
+				z-index: 10;
+			}
+
+			.dot {
+				width: 8px;
+				height: 8px;
+				background: rgba(255, 255, 255, 0.6);
+				border: 1px solid rgba(0, 0, 0, 0.1);
+				border-radius: 50%;
+				cursor: pointer;
+				transition: all 0.3s ease;
+			}
+
+			.dot.active {
+				background: #4f46e5;
+				width: 22px;
+				border-radius: 10px;
+			}
+
+			.card-content {
+				width: 55%;
+				padding: 35px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			.step-number {
+				font-size: 2.5em;
+				font-weight: 800;
+				color: #e2e8f0;
+				display: block;
+				line-height: 1;
+			}
+
+			.step-subtitle {
+				font-size: 0.75em;
+				font-weight: 700;
+				color: #4f46e5;
+				letter-spacing: 0.5px;
+			}
+
+			/* 4. Engineering Approach / Troubleshooting Box */
+			.troubleshooting-box {
+				background: #fffbf0;
+				border: 1px solid #fef3c7;
+				border-radius: 18px;
+				padding: 25px;
+				margin-bottom: 40px;
+			}
+
+			.troubleshooting-box h3 {
+				color: #b45309;
+				margin-top: 0;
+				font-size: 1.2em;
+			}
+
 			@media screen and (max-width: 768px) {
 				#top-navbar .top-navbar-inner {
 					overflow-x: auto;
+				}
+				.card-with-slider {
+					flex-direction: column;
+				}
+				.slider-container, .card-content {
+					width: 100%;
+				}
+				.slider-container {
+					height: 260px;
 				}
 			}
 		</style>
@@ -107,11 +314,9 @@
 				<nav>
 					<a href="index.html">Home</a>
 					<a href="generic.html">About me</a>
-					<a href="Projets.html">Academic Projects</a>
-					<a href="experience.html">Experience</a>
+					<a href="Projets.html" style="color: #8C8C8C !important;">Academic Projects</a>
+					<a href="experience.html">Experiences</a>
 					<a href="education.html">Education</a>
-					<a href="qualification.html">Qualification</a>
-					<a href="asso.html" style="color: #8C8C8C !important;">Asso</a>
 				</nav>
 			</div>
 		</header>
@@ -119,13 +324,144 @@
 		<!-- Wrapper -->
 		<div id="wrapper">
 
-			<!-- Main -->
+			<!-- Main Content -->
 			<div id="main">
 				<div class="inner">
-					<h1 style="text-align: center;">Student Life & Associations</h1>
-					<span class="image main"><img src="images/pic13.jpg" alt="Association" style="height: 200px; object-fit: cover; width: 100%;" /></span>
-					<p style="text-align: center;">Discover my involvement in student associations and community activities.</p>
+
+					<!-- Hero Card / Header Banner -->
+					<div class="header-card">
+						<div class="top-badge">
+							🐕 MECHATRONICS PROJECT · ELISA AEROSPACE
+						</div>
+						
+						<h1 class="card-title">
+							Mechatronics Project: <span class="highlight-blue">Walking Quadruped Robot</span>
+						</h1>
+						
+						<p class="card-subtitle">
+							During my second year at ELISA, I designed and fabricated with my team a walking quadruped robot. The goal of this project was to design and fabricate an autonomous quadruped robot capable of walking. The project features 3D CAD modeling of custom adaptation components, a regulated power supply system, and a static balancing algorithm written in Arduino C++.
+						</p>
+
+						<div class="tags-container">
+							<span class="tag">Arduino C++</span>
+							<span class="tag">3DExperience CAD</span>
+							<span class="tag">PLA 3D Printing</span>
+						</div>
+					</div>
+
+					<!-- ================= SLIDER CARD 1 ================= -->
+					<div class="card-with-slider">
+						<div class="slider-container">
+							<img src="images/piece_robot.jpg" class="slide active" alt="Disassembled quadruped robot components" />
+							<img src="images/robot_dessus.jpg" class="slide" alt="Assembled quadruped robot top view" />
+							<img src="images/plaque.png" class="slide" alt="CAD model of adapter plate" />
+							<img src="images/roulement.png" class="slide" alt="CAD model for bearing washer" />
+
+							<button class="slider-btn prev">❮</button>
+							<button class="slider-btn next">❯</button>
+
+							<div class="slider-dots"></div>
+						</div>
+
+						<div class="card-content">
+							<span class="step-number">01</span>
+							<span class="step-subtitle">INITIAL STAGES</span>
+							<h2>CAD Architecture and Assembly</h2>
+							
+							<p style="margin-bottom: 12px; color: #475569; line-height: 1.5;">
+								In this first stage of the project, we analyzed how and why the quadruped design would work, established a complete list of all required components, and set up a project timeline to ensure everything was ready on time.
+							</p>
+
+							<ul style="margin: 0; padding-left: 18px; color: #475569; font-size: 0.9em; line-height: 1.6;">
+								<li><strong>Mechanical Analysis:</strong> Drafted a numerical analysis report evaluating key mechanical and physical constraints.</li>
+								<li><strong>3D CAD Adaptations:</strong> 3D-printed main chassis and 4 articulated legs using PLA. Designed custom mounting plates in 3DExperience to fit an Arduino Nano onto a chassis intended for an Arduino Mega and a bearing spacer. Integrated ON/OFF switch housing.</li>
+								<li><strong>Physical Robot Assembly:</strong> Personally assembled the physical quadruped structure, fitting the 3D-printed PLA frame, articulated leg linkages, joint pins, and servomotors.</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- ================= SLIDER CARD 2 ================= -->
+					<div class="card-with-slider">
+						<div class="slider-container">
+							<img src="images/robot_coté.jpg" class="slide active" alt="Electronic wiring view" />
+							<img src="images/cable.jpg" class="slide" alt="Arduino Nano board and expansion shield" />
+							<img src="images/robot_chien_reseau.png" class="slide" alt="Wiring diagram and LiPo battery setup" />
+							<img src="images/robot_dessus.jpg" class="slide" alt="Top view of electronics integration" />
+
+							<button class="slider-btn prev">❮</button>
+							<button class="slider-btn next">❯</button>
+
+							<div class="slider-dots"></div>
+						</div>
+
+						<div class="card-content">
+							<span class="step-number">02</span>
+							<span class="step-subtitle">Second stage of the project</span>
+							<h2>Electronics & Component Integration</h2>
+
+							<p style="margin-bottom: 12px; color: #475569; line-height: 1.5;">
+								During this second phase, the main challenge was understanding how each component functioned and mastering precise soldering techniques to avoid damaging sensitive electronics. Through hard work and careful testing, we successfully completed the electronic integration.
+							</p>
+
+							<ul style="margin: 0; padding-left: 18px; color: #475569; font-size: 0.9em; line-height: 1.6;">
+								<li><strong>Power Management:</strong> Helped to map out the full wiring diagram, defining pin allocations for power rails (VCC 5V, GND).</li>
+								<li><strong>Sensors & Wiring:</strong> Hand-soldered power distribution rails, custom breadboard cabling, battery switch connections, and expansion board headers.</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- ================= SLIDER CARD 3 (MULTIPLE VIDEOS) ================= -->
+					<div class="card-with-slider">
+						<div class="slider-container">
+							<video class="slide active" autoplay muted loop playsinline controls>
+								<source src="vidéo/test_1.MP4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+							<video class="slide" muted loop playsinline controls>
+								<source src="vidéo/Video Project 2.MP4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+
+							<button class="slider-btn prev">❮</button>
+							<button class="slider-btn next">❯</button>
+
+							<div class="slider-dots"></div>
+						</div>
+
+						<div class="card-content">
+							<span class="step-number">03</span>
+							<span class="step-subtitle">Last stage</span>
+							<h2>ROBOT PROGRAMMING</h2>
+
+							<p style="margin-bottom: 12px; color: #475569; line-height: 1.5;">
+								As we entered the final programming phase, we developed the control algorithms for static balancing and gait execution in Arduino C++, integrating IMU sensor feedback to keep the robot stable during locomotion.
+							</p>
+
+							<ul style="margin: 0; padding-left: 18px; color: #475569; font-size: 0.9em; line-height: 1.6;">
+								<li><strong>Mass Transfer:</strong> Assisted in developing the program CoM balance routines to keep the robot stable while walking.</li>
+								<li><strong>Arduino C++ Firmware:</strong> Co-developed control algorithms for servo angle transformation matrices, joint limit constraints, and gait timing cycles.</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Key Lessons Learned Box -->
+					<div class="troubleshooting-box">
+						<h3>💡 Key Takeaways & What I Learned</h3>
+						<ul style="margin: 0; padding-left: 20px; color: #78350f; font-size: 0.93em; line-height: 1.6;">
+							<li><strong>Rapid CAD Prototyping:</strong> Learned to quickly adapt to hardware constraints by modeling and 3D-printing custom interface plates to overcome board incompatibilities without delaying project milestones.</li>
+							<li><strong>Power & Signal Integrity:</strong> Understood the real-world impact of transient voltage drops caused by 12 high-torque servos and mastered routing dedicated power rails to isolate sensitive I2C sensors.</li>
+							<li><strong>Practical Problem-Solving:</strong> Developed mechanical resourcefulness by designing custom 3D-printed shim washers on the fly to solve assembly issues like missing bearings.</li>
+						</ul>
+					</div>
+
 				</div>
+			</div>
+
+			<!-- Back to Academic Projects Button -->
+			<div style="text-align: center; margin: 45px 0 30px 0;">
+				<a href="Projets.html" style="display: inline-flex; align-items: center; gap: 10px; background-color: #0084ff; color: #ffffff !important; padding: 14px 30px; border-radius: 30px; font-weight: 700; font-size: 0.95em; text-decoration: none !important; box-shadow: 0 4px 15px rgba(0, 132, 255, 0.25); transition: all 0.2s ease;">
+					&larr; Back to Academic Projects
+				</a>
 			</div>
 
 			<!-- Footer Modernisé -->
@@ -174,12 +510,81 @@
 
 		</div>
 
-		<!-- Scripts Phantom -->
+		<!-- Phantom Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/browser.min.js"></script>
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
 
+		<!-- Image & Video Multi-Slider Script -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const sliderCards = document.querySelectorAll('.card-with-slider');
+
+				sliderCards.forEach(card => {
+					let currentIndex = 0;
+					const slides = card.querySelectorAll('.slide');
+					const dotsContainer = card.querySelector('.slider-dots');
+
+					if (slides.length === 0) return;
+
+					if (dotsContainer) {
+						dotsContainer.innerHTML = '';
+						slides.forEach((_, i) => {
+							const dot = document.createElement('span');
+							dot.classList.add('dot');
+							if (i === 0) dot.classList.add('active');
+							dot.addEventListener('click', function(e) {
+								e.preventDefault();
+								updateSlider(i);
+							});
+							dotsContainer.appendChild(dot);
+						});
+					}
+
+					const dots = card.querySelectorAll('.dot');
+					const prevBtn = card.querySelector('.slider-btn.prev');
+					const nextBtn = card.querySelector('.slider-btn.next');
+
+					function updateSlider(index) {
+						if (index >= slides.length) currentIndex = 0;
+						else if (index < 0) currentIndex = slides.length - 1;
+						else currentIndex = index;
+
+						slides.forEach((slide, i) => {
+							const isActive = i === currentIndex;
+							slide.classList.toggle('active', isActive);
+							
+							if (slide.tagName === 'VIDEO') {
+								if (isActive) {
+									slide.play().catch(() => {});
+								} else {
+									slide.pause();
+								}
+							}
+						});
+
+						dots.forEach((dot, i) => {
+							dot.classList.toggle('active', i === currentIndex);
+						});
+					}
+
+					if (prevBtn) {
+						prevBtn.addEventListener('click', function(e) {
+							e.preventDefault();
+							updateSlider(currentIndex - 1);
+						});
+					}
+
+					if (nextBtn) {
+						nextBtn.addEventListener('click', function(e) {
+							e.preventDefault();
+							updateSlider(currentIndex + 1);
+						});
+					}
+				});
+			});
+		</script>
 	</body>
-</html>
+</html>s
