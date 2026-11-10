@@ -14,7 +14,7 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
 		<style>
-			/* 1. Navigation Haute (Bandeau Blanc unifié - Identique au Modèle 1) */
+			/* 1. Navigation Haute (Bandeau Blanc unifié) */
 			#top-navbar {
 				background-color: #ffffff !important;
 				width: 100% !important;
@@ -96,7 +96,21 @@
 				display: none !important;
 			}
 
-			/* 2. Style personnalisé pour les cartes de projets */
+			/* 2. Hero Banner Bleu */
+			.hero-wrapper {
+				position: relative;
+				width: 100% !important;
+				padding: 40px 20px;
+				margin: 0 0 40px 0;
+				background: linear-gradient(180deg, #1b5b88 0%, #689cb9 50%, #d8e5ed 100%);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 0;
+				box-shadow: inset 0 0 60px rgba(0,0,0,0.1);
+			}
+
+			/* 3. Style personnalisé pour les cartes de projets */
 			.projects-grid {
 				display: flex;
 				flex-direction: row;
@@ -135,7 +149,7 @@
 			}
 
 			.project-card .card-header-gradient.teal {
-				background: linear-gradient(135deg, #00b4db 0%, #00a896 100%);
+				background: linear-gradient(135deg, #1b5b88 0%, #689cb9 100%);
 			}
 
 			.project-card .category-title {
@@ -165,7 +179,7 @@
 
 			.project-card h3 {
 				font-size: 1.3em;
-				color: #1a202c;
+				color: #1b5b88;
 				margin: 0 0 15px 0;
 				font-weight: 700;
 				line-height: 1.3;
@@ -243,23 +257,28 @@
 					<a href="index.html">Home</a>
 					<a href="generic.html">About me</a>
 					<a href="Projets.html" style="color: #8C8C8C !important;">Academic Projects</a>
-					<a href="experience.html">Experience</a>
+					<a href="experience.html">Experiences</a>
 					<a href="education.html">Education</a>
-									</nav>
+				</nav>
 			</div>
 		</header>
 
 		<!-- Wrapper -->
 		<div id="wrapper">
 
+			<!-- Hero Banner Bleu -->
+			<div class="hero-wrapper">
+				<div style="max-width: 900px; width: 100%; text-align: center;">
+					<h1 style="color: #ffffff !important; text-align: center; margin-bottom: 20px;">Academic Projects</h1>
+					<span class="image main" style="margin: 0;">
+											</span>
+				</div>
+			</div>
+
 			<!-- Main -->
 			<div id="main">
 				<div class="inner">
-					<h1 style="text-align: center;">Academic Projects</h1>
-					<span class="image main">
-						<img src="images/pic13.jpg" alt="Illustration" style="height: 200px; object-fit: cover; width: 100%;" />
-					</span>
-					<p>Pendant mes années d'ingénieurs j'ai pu réaliser des projets mécatroniques tels que le robot marcheur et l'hélicoptère GALA.</p>
+					<p style="text-align: center;">In this section, you can explore my engineering projects from my second year and my current third year at ELISA Aerospace</p>
 
 					<!-- Grille englobant les 2 cartes côte à côte -->
 					<div class="projects-grid">
@@ -267,15 +286,15 @@
 						<!-- Carte 1 : Robot Quadrupède -->
 						<div class="project-card">
 							<div class="card-header-gradient teal">
-								<span class="category-title">Robotics / Embedded Systems</span>
+								<span class="category-title">Robotics Systems</span>
 								<span class="featured-badge">FEATURED</span>
 							</div>
 							<div class="card-body">
 								<h3>Walking quadruped robot</h3>
-								<p>2nd-Year Engineering Project — Motorized Quadruped Walking Robot with Leg Kinematics and Electronic Integration</p>
+								<p>This is my 2nd-Year Engineering Project. It is a Motorized Quadruped Walking Robot.</p>
 								
 								<ul class="project-bullets">
-									<li>Programmed gait algorithms and calibrated servomotors</li>
+									<li>Programmed and calibrated servomotors</li>
 									<li>Designed mechanical components and assembled 3D-printed structures</li>
 									<li>Embedded Architecture</li>
 								</ul>
@@ -283,8 +302,10 @@
 								<div class="tags-container">
 									<span class="tag-pill">Robotics</span>
 									<span class="tag-pill">C++</span>
-									<span class="tag-pill">Kinematics</span>
-									<span class="tag-pill">Embedded</span>
+									<span class="tag-pill">Welding</span>
+									<span class="tag-pill">CAD</span>
+<span class="tag-pill">Group Project</span>
+
 								</div>
 
 								<a href="projet_1.html" class="btn-details">View Details &rarr;</a>
@@ -294,12 +315,12 @@
 						<!-- Carte 2 : Helicopter Drone -->
 						<div class="project-card">
 							<div class="card-header-gradient">
-								<span class="category-title">Aeronautics / Mechatronics</span>
+								<span class="category-title">Aeronautics Systems</span>
 								<span class="featured-badge">FEATURED</span>
 							</div>
 							<div class="card-body">
 								<h3>Drone Helicopter</h3>
-								<p>3rd-Year Engineering Project — Design and Sizing of a 3D-Printed Coaxial Micro-Drone Helicopter. Just started this project so it isnt updated</p>
+								<p>Currently developing my 3rd-year engineering project. Updates will be posted as the project progresses.</p>
 								
 								<ul class="project-bullets">
 									<li>Anti-torque system and tail rotor design</li>
@@ -309,12 +330,13 @@
 
 								<div class="tags-container">
 									<span class="tag-pill">Mechatronics</span>
-									<span class="tag-pill">CAO 3D</span>
+									<span class="tag-pill">CAD</span>
 									<span class="tag-pill">Electronics</span>
-									<span class="tag-pill">Arduino</span>
+									<span class="tag-pill">Group Project</span>
 								</div>
 
-								<a href="" class="btn-details">View Details &rarr;</a>
+								<!--<a href="projet_2.html" class="btn-details">View Details &rarr;</a>-->
+
 							</div>
 						</div>
 
