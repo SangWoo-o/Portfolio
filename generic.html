@@ -14,7 +14,7 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
 		<style>
-			/* 1. Navigation Haute (Bandeau Blanc unifié - Copie exacte du Modèle 1) */
+			/* 1. Navigation Haute (Bandeau Blanc unifié) */
 			#top-navbar {
 				background-color: #ffffff !important;
 				width: 100% !important;
@@ -96,7 +96,21 @@
 				display: none !important;
 			}
 
-			/* 2. Style des cartes de réalisations/qualifications */
+			/* 2. Hero Wrapper Bleu */
+			.hero-wrapper {
+				position: relative;
+				width: 100% !important;
+				padding: 40px 20px;
+				margin: 0 0 40px 0;
+				background: linear-gradient(180deg, #1b5b88 0%, #689cb9 50%, #d8e5ed 100%);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 0;
+				box-shadow: inset 0 0 60px rgba(0,0,0,0.1);
+			}
+
+			/* 3. Style des cartes de réalisations/qualifications */
 			.asso-container {
 				display: flex;
 				flex-direction: column;
@@ -106,7 +120,7 @@
 			}
 
 			.asso-card {
-				background: #f8fafc;
+				background: #E1F5FF;
 				border: 1px solid #e2e8f0;
 				border-radius: 24px;
 				padding: 30px;
@@ -204,7 +218,7 @@
 
 	<body class="is-preload">
 
-		<!-- Navigation Haute (Structure strictement identique au Modèle 1) -->
+		<!-- Navigation Haute -->
 		<header id="top-navbar">
 			<div class="top-navbar-inner">
 				<a href="index.html" class="top-navbar-logo">
@@ -214,22 +228,27 @@
 					<a href="index.html">Home</a>
 					<a href="generic.html" style="color: #8C8C8C !important;">About me</a>
 					<a href="Projets.html">Academic Projects</a>
-					<a href="experience.html">Experience</a>
+					<a href="experience.html">Experiences</a>
 					<a href="education.html">Education</a>
-									</nav>
+				</nav>
 			</div>
 		</header>
 
 		<!-- Wrapper -->
 		<div id="wrapper">
 
+			<!-- Hero Banner Bleu -->
+			<div class="hero-wrapper">
+				<div style="max-width: 900px; width: 100%; text-align: center;">
+					<h1 style="color: #ffffff !important; text-align: center; margin-bottom: 20px;">About Me</h1>
+					<span class="image main" style="margin: 0;">
+											</span>
+				</div>
+			</div>
+
 			<!-- Main -->
 			<div id="main">
 				<div class="inner">
-					<h1 style="text-align: center;">About Me</h1>
-					<span class="image main">
-						<img src="images/avion.avif" alt="Avion" style="height: 205px; object-fit: cover; width: 100%;" />
-					</span>
 
 					<p>Hello! I’m Ambre, a third-year engineering student at ELISA Aerospace in France specializing in aeronautical and mechatronic engineering.</p>
 
@@ -239,38 +258,13 @@
 
 					<p>Driven by this lifelong commitment, I naturally chose to pursue aerospace engineering. Having successfully passed my theoretical Private Pilot License (PPL) exam, I am currently working toward completing my practical flight training, aiming for a career as a pilot, flight operations engineer, or flight test engineer.</p>
 
-					<!-- Carte 1 : BIA -->
-					<div class="asso-container" style="margin-top: 40px;">
-						<div class="asso-card">
-							<div class="asso-header">
-								<img src="images/bia-logo.jpg" alt="BIA Logo" class="asso-logo" />
-								<div class="asso-info">
-									<h3>BIA — Aeronautical Initiation Certificate</h3>
-									<div class="asso-organization">Ministère de l'Éducation Nationale / Air Base 106 · France</div>
-									<div class="asso-date">2023</div>
-
-									<div class="asso-tags">
-										<span class="asso-tag-pill">Aeronautics Basis</span>
-										<span class="asso-tag-pill">Aerodynamics & Flight Mechanics</span>
-										<span class="asso-tag-pill">Air Base 106 Visit</span>
-										<span class="asso-tag-pill">Aviation Culture</span>
-									</div>
-								</div>
-							</div>
-
-							<ul class="asso-bullets">
-								<li>Acquired core theoretical knowledge in aerodynamics, flight mechanics, navigation, meteorology, and aviation history.</li>
-								<li>Explored military aviation operations and aircraft infrastructure during an official technical visit to Air Base 106 (BA 106).</li>
-								<li>Validated a strong foundational commitment to aeronautical engineering and flight operations.</li>
-							</ul>
-						</div>
-					</div>
+					
 
 					<!-- Carte 2 : Parachutisme -->
-					<div class="asso-container" style="margin-top: 25px;">
+					<div class="asso-container" style="margin-top: 25px; color: #8C8C8C;">
 						<div class="asso-card">
 							<div class="asso-header">
-								<img src="images/skydiving-logo.jpg" alt="Parachutisme Logo" class="asso-logo" />
+								<img src="images/para.PNG" alt="Parachutisme Logo" class="asso-logo" />
 								<div class="asso-info">
 									<h3>Autonomous Skydiver — PAC License</h3>
 									<div class="asso-organization">Vertical T'Air · France</div>
@@ -286,9 +280,36 @@
 							</div>
 
 							<ul class="asso-bullets">
-								<li>Obtained the PAC (Parachutisme Autonome Accompagné) certification, validating solo freefall capability and canopy control.</li>
+								<li>Obtained the PAC certification, validating solo freefall capability and canopy control.</li>
 								<li>Developed rigorous safety checks, sharp altitude awareness, and high-level decision-making under intense conditions.</li>
 								<li>Demonstrated strong self-control and analytical focus directly linked to flight safety principles.</li>
+							</ul>
+						</div>
+					</div>
+<!-- Carte 1 : BIA -->
+					<div class="asso-container" style="margin-top: 40px;color: #ffffff;
+">
+						<div class="asso-card">
+							<div class="asso-header">
+								
+								<div class="asso-info">
+									<h3>BIA — Aeronautical Initiation Certificate</h3>
+									<div class="asso-organization">France</div>
+									<div class="asso-date">2023</div>
+
+									<div class="asso-tags">
+										<span class="asso-tag-pill">Aeronautics Basis</span>
+																				<span class="asso-tag-pill">Air Base 106 Visit</span>
+										<span class="asso-tag-pill">Aviation Culture</span><span class="asso-tag-pill">ULM flights</span>
+
+									</div>
+								</div>
+							</div>
+
+							<ul class="asso-bullets">
+								<li>Acquired core theoretical knowledge in aerodynamics, flight mechanics, navigation, meteorology,English aviation terminology and aviation history.</li>
+								<li>Explored military aviation operations and aircraft infrastructure during an official technical visit to Air Base 106 (BA 106).</li>
+								<li>Validated a strong foundational commitment to aeronautical engineering and flight operations.</li>
 							</ul>
 						</div>
 					</div>
@@ -296,13 +317,13 @@
 				</div>
 			</div>
 
-			<!-- Footer Modernisé -->
+			<!-- Footer -->
 			<footer id="footer" style="background-color: #1a2332; color: #ffffff; padding: 50px 0 30px 0; margin-top: 60px;">
 				<div class="inner" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
 					
 					<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; margin-bottom: 30px;">
 						
-						<!-- Colonne 1 : Statut & Contact rapide -->
+						<!-- Statut & Contact -->
 						<div style="flex: 1; min-width: 280px;">
 							<h3 style="color: #ffffff; font-size: 1.1em; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 12px; text-transform: uppercase;">
 								Get in Touch
@@ -315,7 +336,7 @@
 							</a>
 						</div>
 
-						<!-- Colonne 2 : Liens & Documents -->
+						<!-- Liens & Documents -->
 						<div style="flex: 1; min-width: 280px; display: flex; flex-direction: column; align-items: flex-start;">
 							<h3 style="color: #ffffff; font-size: 1.1em; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 12px; text-transform: uppercase;">
 								Connect with me
@@ -334,7 +355,7 @@
 
 					<!-- Copyright -->
 					<div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; color: #718096; font-size: 0.8em;">
-						&copy; All rights reserved to Ambre Bagnariol..
+						&copy; All rights reserved to Ambre Bagnariol.
 					</div>
 
 				</div>
